@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+/* Global */
+* {
+    font-family: 'Karla', sans-serif;
+
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--Light-Gray);
+    height: calc(100vh - 1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.firstGrid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #FFF;
+    padding: 2.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.firstGrid h1 {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.firstGrid h2 {
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.firstGrid p {
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--Grayish-Blue);
+}
+
+.secondGrid {
+    background-color: var(--Cyan);
+    border-bottom-left-radius: 0.5rem;
+    padding: 2.5rem;
+}
+
+.secondGrid h1 {
+    color: #FFF;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.secondGrid p {
+    color: #FFF;
+    margin-bottom: 2rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price span {
+    font-size: 2rem;
+    margin-right: 1rem; margin-top: 0.5rem; margin-bottom: 0.5rem;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.price p {
+    color: hsla(204, 43%, 93%, 0.75);
+    margin-right: 1rem; margin-top: 0.5rem; margin-bottom: 0.5rem;
+}
+
+.secondGrid a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 18px;
+    background-color: var(--Bright-Yellow);
+    color: #FFF;
+}
+
+.tertiaryGrid {
+    background-color: hsla(179, 62%, 43%, 0.75);
+    border-bottom-right-radius: 0.5rem;
+    padding: 2.5rem;
+}
+
+.tertiaryGrid h1 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tertiaryGrid ul li {
+    color: hsla(204, 43%, 93%, 0.7);
+    list-style-type: none;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.attribution {
+    font-size: 13px; text-align: center; padding: 10px; color: var(--Cyan);
+}
+
+.attribution a {
+    color: hsl(0, 0%, 0%); text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsla(0, 0%, 0%, 0.75);
+}
+
+@media (max-width: 700px)
+{
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper
+    {   
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1.6rem;
+        padding-top: 25%;
+        
+    }
+    .secondGrid
+    {
+        border-bottom-left-radius: 0;
+    }
+    .tertiaryGrid
+    {
+        border-bottom-left-radius: 0.5rem;
+    }
+}
